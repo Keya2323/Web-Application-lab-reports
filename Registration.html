@@ -1,0 +1,109 @@
+<!-- Name: Israt Jahan -->
+ <!-- ID: 0432320005101130 -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Registration Form</title>
+
+    <body>
+      <h1 align="center">Enter Your Information<br>To registration </h1>
+    </body>
+
+    <style>
+      body{
+        background-color: rgb(219, 230, 237);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+      }
+      form{
+        text-align:left;
+        padding: 15px 20px;
+      }
+      .basic input{
+        float: right;
+        margin-left: 30px;
+      }
+      input:hover, input:active{
+        background-color: whitesmoke;
+        border-style: solid;
+        border-color: black;
+      }
+      .main-box{
+        background-color: rgb(213, 204, 237);
+        text-align:justify;
+        display: block;
+        border-radius: 17px;
+        padding: 30px;
+        width: 400px;
+      }
+      .button input, button{
+        border: 2px solid black;
+        padding: 7px 10px;
+        border-radius: 9px;
+      }
+      .button a{
+      color: black;
+      text-decoration: none;
+      }
+      .button input:hover, button:hover{
+        background-color: gray;
+        cursor: pointer;
+        color: whitesmoke ;
+      }
+    </style>
+</head>
+<body>
+  <div class="main-box">
+    <form action="form.php" method="post">
+      <div class="basic">
+      <label for="name">Username: </label>
+      <input type="text" id="name" placeholder="Enter Username" minlength="3" maxlength="10" required>
+      <br> <br>
+      <label for="pass">Password: </label>
+      <input type="password" id="pass" maxlength="7" placeholder="Enter Password" required>
+      <br> <br>
+      <label for="email">Email: </label>
+      <input type="email" id="email" placeholder="Enter Email Address" required>
+      <br> <br>
+      <label for="contact">Contact Number: </label>
+      <input type="tel" id="contact" placeholder="Enter Contact Number" required>
+      <br> <br>
+    </div>
+    <label for="day">Birthday: </label>
+    <input type="date" id="day" required>
+    <br> <br>
+    <input type="radio" name="gender">
+    <label for="gender">Male</label> 
+    <input type="radio" name="gender">
+    <label for="gender">Female</label> 
+    <select name="" id="" style="margin-left: 80px;">
+      <option value="">Married</option>
+      <option value="">Unmarried</option>
+    </select>
+    <br> <br>
+    <label for="child">Children</label>
+    <input type="number" id="child">
+    <br> <br>
+    <label for="file">Enter Your CV</label>
+    <input type="file" id="file" style="border: none;">
+    <br> <br>
+    <input type="checkbox" id="check" required>
+    <label for="check">I agree with <a href="#">terms and conditions</a></label>
+    <br> <br>
+    <textarea name="" id="" rows="4" cols="50"></textarea>
+    <br><br>
+    <div class="button">
+      <input type="reset">
+      <input style="float: right; margin-right: 2px;" type="submit">
+      <button><a href="login.html">LogIn</a></button>
+    </div>
+    </form>
+  </div>
+</body>
+
+</html>
