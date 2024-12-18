@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guitar$</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+            text-align: center;
+        }
+
+        h1 {
+            margin: 20px 0;
+            font-size: 48px;
+            font-weight: bold;
+            color: black;
+        }
+
+        h1 span {
+            color: #ff3333;
+        }
+
+        .products {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .product {
+            border: 2px solid black;
+            border-radius: 10px;
+            padding: 15px;
+            width: 250px;
+            background-color: #fff;
+            text-align: center;
+        }
+
+        .product img {
+            width: 80%;
+            height: auto;
+            margin-bottom: 10px;
+        }
+
+        .quantity {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 10px 0;
+        }
+
+        .quantity button {
+            background-color: #ffcc00;
+            border: none;
+            font-size: 18px;
+            width: 30px;
+            cursor: pointer;
+        }
+
+        .qty {
+            display: inline-block;
+            width: 30px;
+            text-align: center;
+        }
+
+        button.add-to-cart {
+            background-color: #333;
+            color: #fff;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        .cart-summary {
+            margin: 20px auto;
+            width: 80%;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            border: 2px solid black;
+        }
+
+        table {
+            width: 100%;
+            margin: 10px 0;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            border-bottom: 1px solid #ddd;
+            padding: 10px;
+        }
+
+        .delete-item {
+            color: red;
+            border: none;
+            background: none;
+            cursor: pointer;
+            font-size: 14px;
+            text-decoration:underline;
+        }
+
+        h5 {
+            margin: 20px 0;
+            font-size: 14px;
+            font-weight: bold;
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1>Guitar<span>$</span></h1>
+    <div class="products">
+        <div class="products">
+            <div class="product">
+                <img src="cort-gold-passion-acoustic-guitar-grid-2.jpg" alt="Acoustic Guitar">
+                <h3>Acoustic Guitar: Gold-Passion</h3>
+                <p>Price: Tk <span class="price">20000</span></p>
+                <div class="quantity">
+                    <button class="minus">-</button>
+                    <span class="qty">1</span>
+                    <button class="plus">+</button>
+                </div>
+                <button class="add-to-cart" data-name="Acoustic Guitar: Gold-Passion" data-price="20000">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="cort-grand-regal-ga-my-bevel-acoustic-electric-guitar-grid-2.jpg" alt="Acoustic Guitar">
+                <h3>Acoustic Guitar: GA-MY Bevel</h3>
+                <p>Price: Tk <span class="price">18500</span></p>
+                <div class="quantity">
+                    <button class="minus">-</button>
+                    <span class="qty">1</span>
+                    <button class="plus">+</button>
+                </div>
+                <button class="add-to-cart" data-name="Acoustic Guitar: GA-MY Bevel" data-price="18500">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="cort-grs-ga1e-acoustic-guitar-grid.jpg" alt="Acoustic Guitar">
+                <h3>Acoustic Guitar: Grand Regal GA1E</h3>
+                <p>Price: Tk <span class="price">15000</span></p>
+                <div class="quantity">
+                    <button class="minus">-</button>
+                    <span class="qty">1</span>
+                    <button class="plus">+</button>
+                </div>
+                <button class="add-to-cart" data-name="Acoustic Guitar: Grand Regal GA1E" data-price="15000">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="masterpiece-abstract-delta-grid-2.jpg" alt="Acoustic Guitar">
+                <h3>Acoustic Guitar: Abstract Delta</h3>
+                <p>Price: Tk <span class="price">17250</span></p>
+                <div class="quantity">
+                    <button class="minus">-</button>
+                    <span class="qty">1</span>
+                    <button class="plus">+</button>
+                </div>
+                <button class="add-to-cart" data-name="Acoustic Guitar: Abstract Delta" data-price="17250">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="cort-masterpiece-solencanto-acoustic-electric-guitar-grid-2.jpg" alt="Acoustic Guitar">
+                <h3>Acoustic Guitar: Sol Encanto</h3>
+                <p>Price: Tk <span class="price">21000</span></p>
+                <div class="quantity">
+                    <button class="minus">-</button>
+                    <span class="qty">1</span>
+                    <button class="plus">+</button>
+                </div>
+                <button class="add-to-cart" data-name="Acoustic Guitar: Sol Encanto" data-price="21000">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="masterpiece-modern-black-grid-2.jpg" alt="Acoustic Guitar">
+                <h3>Acoustic Guitar: Modern Black</h3>
+                <p>Price: Tk <span class="price">23000</span></p>
+                <div class="quantity">
+                    <button class="minus">-</button>
+                    <span class="qty">1</span>
+                    <button class="plus">+</button>
+                </div>
+                <button class="add-to-cart" data-name="Acoustic Guitar: Modern Black" data-price="23000">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="cort-cr-cr100-electric-guitar-grid-1.jpg" alt="Electric Guitar">
+                <h3>Electric Guitar: CR100</h3>
+                <p>Price: Tk <span class="price">24700</span></p>
+                <div class="quantity">
+                    <button class="minus">-</button>
+                    <span class="qty">1</span>
+                    <button class="plus">+</button>
+                </div>
+                <button class="add-to-cart" data-name="Electric Guitar: CR100" data-price="24700">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="cort-x-x700-mutility-electric-guitar-grid.jpg" alt="Electric Guitar">
+                <h3>Electric Guitar: X700 Mutility</h3>
+                <p>Price: Tk <span class="price">16000</span></p>
+                <div class="quantity">
+                    <button class="minus">-</button>
+                    <span class="qty">1</span>
+                    <button class="plus">+</button>
+                </div>
+                <button class="add-to-cart" data-name="Electric Guitar: X700 Mutility" data-price="16000">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="cort-kx-kx-307-multi-scale-electric-guitar-grid-2.jpg" alt="Electric Guitar">
+                <h3>Electric Guitar: KX307 Multi Scale</h3>
+                <p>Price: Tk <span class="price">19650</span></p>
+                <div class="quantity">
+                    <button class="minus">-</button>
+                    <span class="qty">1</span>
+                    <button class="plus">+</button>
+                </div>
+                <button class="add-to-cart" data-name="Electric Guitar: KX307 Multi Scale" data-price="19650">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="g200-grid.jpg" alt="Electric Guitar">
+                <h3>Electric Guitar: G200</h3>
+                <p>Price: Tk <span class="price">22300</span></p>
+                <div class="quantity">
+                    <button class="minus">-</button>
+                    <span class="qty">1</span>
+                    <button class="plus">+</button>
+                </div>
+                <button class="add-to-cart" data-name="Electric Guitar: G200" data-price="22300">Add to Cart</button>
+            </div>
+    </div>
+
+    <div class="cart-summary">
+        <h2>Order Summary</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Item</th>
+                    <th>Quantity</th>
+                    <th>Total Price</th>
+                </tr>
+            </thead>
+            <tbody id="cart-items"></tbody>
+        </table>
+        <p>Total Price: Tk <span id="total-price">0</span></p>
+        <p>Discount (25%): Tk <span id="discount">0</span></p>
+        <p>Tax (6%): Tk <span id="tax">0</span></p>
+        <h3>Final Price: Tk <span id="final-price">0</span></h3>
+    </div>
+    <h5>────────────────── Thanks for your visit ──────────────────</h5>
+
+    <script>
+        const addToCartButtons = document.querySelectorAll('.add-to-cart');
+        const cartItemsContainer = document.getElementById('cart-items');
+        const totalPriceEl = document.getElementById('total-price');
+        const discountEl = document.getElementById('discount');
+        const taxEl = document.getElementById('tax');
+        const finalPriceEl = document.getElementById('final-price');
+
+        let cart = {};
+
+        addToCartButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const productName = button.getAttribute('data-name');
+                const productPrice = parseFloat(button.getAttribute('data-price'));
+                const qty = parseInt(button.previousElementSibling.querySelector('.qty').innerText);
+
+                if (cart[productName]) {
+                    cart[productName].quantity += qty;
+                } else {
+                    cart[productName] = { price: productPrice, quantity: qty };
+                }
+
+                updateCart();
+                button.previousElementSibling.querySelector('.qty').innerText = '1';
+            });
+        });
+
+        function updateCart() {
+            cartItemsContainer.innerHTML = '';
+            let total = 0;
+
+            for (const item in cart) {
+                const { price, quantity } = cart[item];
+                const itemTotal = price * quantity;
+                total += itemTotal;
+
+                const row = `
+                    <tr>
+                        <td>${item}</td>
+                        <td>${quantity}</td>
+                        <td>Tk ${itemTotal.toFixed(2)}</td>
+                        <td><button class="delete-item" data-name="${item}">Delete</button></td>
+                    </tr>
+                `;
+                cartItemsContainer.insertAdjacentHTML('beforeend', row);
+            }
+
+            const discount = (total * 0.25).toFixed(2);
+            const tax = ((total - discount) * 0.06).toFixed(2);
+            const finalPrice = (total - discount + parseFloat(tax)).toFixed(2);
+
+            totalPriceEl.innerText = total.toFixed(2);
+            discountEl.innerText = discount;
+            taxEl.innerText = tax;
+            finalPriceEl.innerText = finalPrice;
+
+        document.querySelectorAll('.delete-item').forEach(button => {
+                button.addEventListener('click', () => {
+                    deleteItem(button.getAttribute('data-name'));
+                });
+            });
+
+        function deleteItem(itemName) {
+            delete cart[itemName];
+            updateCart();
+        }
+    }
+
+        document.querySelectorAll('.minus, .plus').forEach(button => {
+            button.addEventListener('click', () => {
+                const qtyEl = button.parentElement.querySelector('.qty');
+                let qty = parseInt(qtyEl.innerText);
+
+                if (button.classList.contains('plus')) {
+                    qty++;
+                } else if (qty > 1) { 
+                    qty--;
+                }
+                qtyEl.innerText = qty;
+            });
+        });
+    </script>
+</body>
+</html>
